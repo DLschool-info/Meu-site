@@ -1,29 +1,65 @@
-<!DOCTYPE html>
+<!--DOCTYPE html-->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
-    <title>Site Para as aulas html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--imagem da aba de pesquisa e titulo.-->
+	<title>Minha Página HTML5:</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="image/favicon.png">
 
 </head>
 <body>
 
 <header>
-    <h1>Vamos Começar</h1>
+ <!--frase de apresentação-->
+   <h1>DLschool Informática</h1>
+ 
 </header>
-
+<!--janelas de navegação-->
 <nav>
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Serviços</a>
-    <a href="#">Contato</a>
+    <a href="#" onclick="mostrar('Inicio')">Início</a>
+    <a href="#" onclick="mostrar('Sobre')">Sobre</a>
+    <a href="#" onclick="mostrar('Serviços')">Serviços</a>
+    <a href="#" onclick="mostrar('Contato')">Contato</a>
 </nav>
+<!--Abas-->
+<div id="Início">
+	<h2>Benvindo à minha pagina</h2>
+	<p>Conteúdo da pagina</p>
+</div>
+
+<div id ="Sobre" style="display: none;">
+	<h2>Sobre</h2>
+	<p>Informações sobre o site</p>
+</div>
+
+<div id="Serviços" style="display: none;">
+	<h2>Serviços</h2>
+	<p>Informações do site</p>
+</div>
+
+<div id="Contato" style="display: none;">
+	<h2>Contato</h2>
+	<p>Contato com os adm's do site</p>
+</div>
+<!--Script da Troca de Abas---->
+<script>
+function mostrar(pagina) {
+	document.getElementById('Início').style.display = 'none'
+	document.getElementById('Sobre').style.display = 'none'
+	document.getElementById('Serviços').style.display = 'none'
+	document.getElementById('Contato').style.display = 'none'
+	
+	document.getElementById(pagina).style.display = 'block';
+}
+</script>
 
 <main>
     <article>
         <h2>Conteúdo Principal</h2>
-        <p>Esta é a área principal da página. Aqui você pode colocar textos, imagens, vídeos ou qualquer outro conteúdo relevante.</p>
+		<p>Esta é a área principal da página. Aqui você pode colocar textos, imagens, vídeos ou qualquer outro conteúdo relevante.</p>
+		<img src="image/grafico.jpg" alt="Grafico" width="550">
     </article>
     
     <aside>

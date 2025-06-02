@@ -1,102 +1,109 @@
-/* Reset básico */
+/* ===== STYLE EDUCAÇÃO CORRIGIDO PARA VÁRIAS IMAGENS ===== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Corpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8fb;
     color: #333;
-    line-height: 1.6;
+    background-image: url('image/Fundo-com-note.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #4CAF50;
+    background-color: #005f99;
     color: white;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 2.5em;
 }
 
 /* Navegação */
 nav {
-    background-color: #333;
+    background-color: #0077cc;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
 }
 
 nav a {
-    display: inline-block;
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #575757;
+    color: #ffcc00;
 }
 
-/* Área principal */
+/* Layout Principal */
 main {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
     padding: 20px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Conteúdo principal */
 article {
-    flex: 2;
-    background: white;
+    flex: 1 1 70%;
+    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-width: 300px;
 }
 
-/* Barra lateral */
 aside {
-    flex: 1;
-    background: white;
+    flex: 1 1 25%;
+    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-width: 200px;
 }
 
 /* Rodapé */
 footer {
-    background-color: #4CAF50;
+    background-color: #005f99;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
 }
 
-/* Títulos */
-h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+/* ====== GALERIA DE IMAGENS ====== */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-/* Links dentro do conteúdo */
-article a {
-    color: #4CAF50;
-    text-decoration: none;
+.galeria img {
+    width: calc(33.33% - 10px);
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-article a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
+/* 📱 Responsividade */
 @media (max-width: 768px) {
+    .galeria img {
+        width: 100%;
+    }
+
     main {
         flex-direction: column;
+    }
+
+    article, aside {
+        width: 100%;
     }
 }

@@ -1,67 +1,70 @@
-<!--DOCTYPE html-->
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--imagem da aba de pesquisa e titulo.-->
-	<title>Minha Página HTML5:</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" type="image/png" href="image/favicon.png">
-
+    <title>DLschool Informática</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 <body>
 
 <header>
- <!--frase de apresentação-->
-   <h1>DLschool Informática</h1>
- 
+    <h1>DLschool Informática</h1>
 </header>
-<!--janelas de navegação-->
+
 <nav>
-    <a href="#" onclick="mostrar('Inicio')">Início</a>
-    <a href="#" onclick="mostrar('Sobre')">Sobre</a>
-    <a href="#" onclick="mostrar('Serviços')">Serviços</a>
-    <a href="#" onclick="mostrar('Contato')">Contato</a>
+    <a href="#" onclick="mostrar('inicio')">Início</a>
+    <a href="#" onclick="mostrar('sobre')">Sobre</a>
+    <a href="#" onclick="mostrar('servicos')">Serviços</a>
+    <a href="#" onclick="mostrar('contato')">Contato</a>
 </nav>
-<!--Abas-->
-<div id="Início">
-	<h2>Benvindo à minha pagina</h2>
-	<p>Conteúdo da pagina</p>
+
+<div id="inicio">
+    <h2>Bem-vindo à DLschool</h2>
+    <p>Na DLschool focamos em ensinar da melhor forma como investir e criar novas formas de ganho para sua vida.</p>
 </div>
 
-<div id ="Sobre" style="display: none;">
-	<h2>Sobre</h2>
-	<p>Informações sobre o site</p>
+<div id="sobre" style="display: none;">
+    <h2>Sobre</h2>
+    <p>Informações sobre o site.</p>
 </div>
 
-<div id="Serviços" style="display: none;">
-	<h2>Serviços</h2>
-	<p>Informações do site</p>
+<div id="servicos" style="display: none;">
+    <h2>Serviços</h2>
+    <p>Descrição dos serviços oferecidos.</p>
 </div>
 
-<div id="Contato" style="display: none;">
-	<h2>Contato</h2>
-	<p>Contato com os adm's do site</p>
+<div id="contato" style="display: none;">
+    <h2>Contato</h2>
+    <p>Formas de contato com os administradores do site.</p>
 </div>
-<!--Script da Troca de Abas---->
+
 <script>
 function mostrar(pagina) {
-	document.getElementById('Início').style.display = 'none'
-	document.getElementById('Sobre').style.display = 'none'
-	document.getElementById('Serviços').style.display = 'none'
-	document.getElementById('Contato').style.display = 'none'
-	
-	document.getElementById(pagina).style.display = 'block';
+    const paginas = ['inicio', 'sobre', 'servicos', 'contato'];
+    paginas.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+    document.getElementById(pagina).style.display = 'block';
 }
 </script>
 
 <main>
     <article>
         <h2>Conteúdo Principal</h2>
-		<p>Esta é a área principal da página. Aqui você pode colocar textos, imagens, vídeos ou qualquer outro conteúdo relevante.</p>
-		<img src="image/grafico.jpg" alt="Grafico" width="550">
+        <p>Esta é a área principal da página. Aqui você pode colocar textos, imagens, vídeos ou qualquer outro conteúdo relevante.</p>
+
+        <div class="galeria">
+            <img src="image/destaque.jpg" alt="Imagem 1">
+            <img src="image/grafico.jpg" alt="Imagem 2">
+            <img src="image/img3.jpg" alt="Imagem 3">
+            <img src="image/img4.jpg" alt="Imagem 4">
+            <img src="image/img5.jpg" alt="Imagem 5">
+            <img src="image/img6.jpg" alt="Imagem 6">
+        </div>
     </article>
-    
+
     <aside>
         <h2>Barra Lateral</h2>
         <p>Informações adicionais, links úteis ou anúncios podem ser colocados aqui.</p>
@@ -69,7 +72,7 @@ function mostrar(pagina) {
 </main>
 
 <footer>
-    <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
+    <p>&copy; 2025 DLschool Informática. Todos os direitos reservados.</p>
 </footer>
 
 </body>
